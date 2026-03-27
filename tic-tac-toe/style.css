@@ -58,6 +58,14 @@ h1{
     color: #EDD9A3;
 
 }
+#newBtn{
+    background-color: #FEC0AA;
+    color: #0F1F0A;
+    border: none;
+    border-radius: 1rem;
+    padding: 8px;
+    font-size: 1.25rem;
+}
 
 #msg-container{
     height: 1000px;
