@@ -25,7 +25,6 @@ const resetGame = () => {
 
 boxes.forEach((box) => {
     box.addEventListener("click", () =>{
-<<<<<<< HEAD:tic-tac-toe/script.js
         if(turn0){
             box.innerText = "O";
             turn0 = false;
@@ -37,17 +36,6 @@ boxes.forEach((box) => {
         box.disabled = true;
 
         checkWinner();
-=======
-        if(turn){
-            box.innerText = "O";
-            turn = false;
-        }
-        else{
-            box.innerText = "X";
-            turn = true;
-        }
-        box.disabled = true;
->>>>>>> 57269a9fdfd7385412a61de1dd5e1853b8f4f1a8:script.js
     })
 });
 

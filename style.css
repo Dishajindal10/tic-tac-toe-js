@@ -54,8 +54,8 @@ h1{
 }
 
 #msg{
-    font-size: 10vmin;
-    color: #EDD9A3;
+    font-size: 8vmin;
+    color: #fdc01a;
 
 }
 #newBtn{
@@ -64,11 +64,16 @@ h1{
     border: none;
     border-radius: 1rem;
     padding: 8px;
-    font-size: 1.25rem;
+    font-size: 1.25rem; 
 }
 
-#msg-container{
-    height: 1000px;
+.msg-container{
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .hide{
