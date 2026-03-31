@@ -85,3 +85,10 @@ h1{
 .hide{
     display: none;
 }
+
+.x-color{
+    color: #ff4d4d;
+}
+.o-color{
+    color: #4d94ff;
+}

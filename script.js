@@ -5,6 +5,11 @@ let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 let cnt = 0;
 
+const clickSound = new Audio("sound/click_sound.mp3");
+const winSound = new Audio("sound/game_win.mp3");
+const drawSound = new Audio("sound/game_draw.mp3");
+
+
 let turn0 = true; // player0
 
 const winPatterns = [
@@ -27,20 +32,23 @@ const resetGame = () => {
 
 boxes.forEach((box) => {
     box.addEventListener("click", () =>{
+        clickSound.play();
+
         if(turn0){
             box.innerText = "O";
+            box.classList.add("o-color");
             turn0 = false;
         }
         else{
             box.innerText = "X";
+            box.classList.add("x-color");
             turn0 = true;
         }
 
         cnt++;
         box.disabled = true;
 
-        let isWinner = checkWinner();
-
+        let isWinner = checkWinner();   
         if(cnt === 9 && !isWinner){
             gameDraw();
         }
@@ -57,12 +65,15 @@ const enableBoxes = () => {
     for(let box of boxes){
         box.disabled = false;
         box.innerText = "";
-     }
+        box.classList.remove("x-color");
+        box.classList.remove("o-color");
+    }
 }
 
 const showWinner = (winner) => {
     msg.innerText = `Congratulations, Winner is ${winner}`;      
     msgContainer.classList.remove("hide");
+    winSound.play();
     disableBoxes();
 }
 
@@ -84,6 +95,7 @@ const checkWinner = () => {
 const gameDraw = () => {
     msg.innerText = "Game was a Draw.";
     msgContainer.classList.remove("hide");
+    drawSound.play();
     disableBoxes();
 }
 
