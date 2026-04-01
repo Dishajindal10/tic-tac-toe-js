@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    display: flex;
+}
+
+.player1{
+    background-color: rgba(255, 78, 2, 0.5);
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+}
+
+.player2{
+    background-color: rgba(13, 83, 234, 0.3);
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.signs{
+    display: flex;
+    flex-direction: column;
+}
+
+.circle{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: 3vh;
+
+}
+
+.p1-color{
+    background-color: rgba(255, 78, 2, 0.5);
+    border: solid 6px rgb(255, 90, 5, 1) ;
+}
+
+.p2-color{
+    background-color: rgba(13, 83, 234, 0.3);
+    border: solid 6px rgba(13, 83, 234, 1);
+}
+
+#p1-rock, #p2-rock{
+    background-image: url('images/rock.webp');
+    background-size: cover;
+}
+
+#p1-paper, #p2-paper{
+    background-image: url('images/paper.png');
+    background-size: cover;
+}
+
+#p1-scissor, #p2-scissor{
+    background-image: url('images/scissor.jpeg');
+    background-size: cover;
+}
+
+button:hover{
+    filter: brightness(1.5);
+}
