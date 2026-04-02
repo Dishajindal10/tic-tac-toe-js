@@ -66,3 +66,16 @@ body{
 button:hover{
     filter: brightness(1.5);
 }
+
+#msg {
+    background-color: #081b31;
+    color: white;
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Puts the message in the dead center */
+}
