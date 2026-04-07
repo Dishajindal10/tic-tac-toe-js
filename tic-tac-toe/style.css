@@ -80,6 +80,7 @@ h1{
     align-items: center;
     flex-direction: column;
     gap: 2rem;
+    display: none;
 }
 
 .hide{

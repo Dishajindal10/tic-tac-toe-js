@@ -5,7 +5,15 @@
 
 body{
     margin: 0;
+    overflow: hidden;
     display: flex;
+}
+
+.p1{
+    padding: 50px;
+}
+.p2{
+    padding: 50px;
 }
 
 .player1{
@@ -77,5 +85,43 @@ button:hover{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Puts the message in the dead center */
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.chosen{
+    transform: scale(2);
+    z-index: 10;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hidden{
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+#timer{
+    font-size: 5rem;
+    color: azure;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.startBtn{
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    background-color: #081b31;
+    color: white;
+    border: solid 2px black ;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+
 }
