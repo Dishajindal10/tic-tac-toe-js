@@ -3,6 +3,7 @@ const choices = document.querySelectorAll(".p1 .circle");
 const msg = document.querySelector("#msg");
 const timerEl = document.querySelector("#timer");
 const startBtn = document.querySelector(".startBtn");
+const playAgainBtn = document.querySelector(".playAgain");
 
 let isGameActive = false;
 
@@ -36,36 +37,39 @@ const playGame = (userChoice, compChoice) => {
 // 4. showWinner:
 const showWinner = (userWin, userChoice, compChoice) => {
     msg.style.display = "block";
+    playAgainBtn.style.display = "inline-block";
     if(userWin){
         msg.innerText = `You win! Your ${userChoice} beats ${compChoice}`;
-        msg.style.backgroundColor = "green";
+        msg.style.color = "green";
     }
     else{
         msg.innerText = `You lost! ${compChoice} beats your ${userChoice}`;
-        msg.style.backgroundColor = "red";
+        msg.style.color = "red";
     }
 }
 
 // 5. draw condition:
 const drawGame = () => {
     msg.style.display = "block";
+    playAgainBtn.style.display = "inline-block";
     msg.innerText = "Game was a draw. Play again!";
     msg.style.backgroundColor = "#081b31";
     console.log("Game was a draw");
 }
 
 // start button logic:
-startBtn.addEventListener("click", () => {
+const startNewRound = () => {
     let cnt = 3;
     isGameActive = false;
 
     msg.style.display = "none";
     startBtn.style.display = "none";
+    playAgainBtn.style.display = "none";
     timerEl.style.display = "block";
     timerEl.innerText = cnt;
 
     // bring back all circles from prev round:
-    document.querySelectorAll(".circles").forEach(c => {
+    document.querySelectorAll(".circle").forEach(c => {
         c.classList.remove("hidden", "chosen");
     });
 
@@ -82,8 +86,10 @@ startBtn.addEventListener("click", () => {
             timerEl.style.display = "none";
         }
     }, 1000);
-});
+};
 
+startBtn.addEventListener("click", startNewRound);
+playAgainBtn.addEventListener("click", startNewRound);
 
 // 6. adding event listener:
 choices.forEach((choice) => {
@@ -116,3 +122,4 @@ const animateComputer = (compChoice) => {
   // Make computer choice bigger
   compElement.classList.add("chosen");
 };
+
