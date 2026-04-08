@@ -53,7 +53,7 @@ const drawGame = () => {
     msg.style.display = "block";
     playAgainBtn.style.display = "inline-block";
     msg.innerText = "Game was a draw. Play again!";
-    msg.style.backgroundColor = "#081b31";
+    msg.style.color = "violet";
     console.log("Game was a draw");
 }
 

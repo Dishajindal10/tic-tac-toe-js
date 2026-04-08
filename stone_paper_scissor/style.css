@@ -7,6 +7,9 @@ body{
     margin: 0;
     overflow: hidden;
     display: flex;
+    background:
+        radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%),
+        linear-gradient(90deg, #0f2027 50%, #203a43 50%);
 }
 
 .p1{
@@ -16,22 +19,22 @@ body{
     padding: 50px;
 }
 
-.player1{
-    background-color: rgba(255, 78, 2, 0.5);
-    height: 100vh;
-    width: 50vw;
-    display: flex;
-    align-items: center;
-}
+ .player1{
+     /* background-color: rgba(255, 78, 2, 0.5); */ 
+     height: 100vh; 
+     width: 50vw; 
+     display: flex; 
+     align-items: center; 
+ }  
 
-.player2{
-    background-color: rgba(13, 83, 234, 0.3);
-    height: 100vh;
-    width: 50vw;
+ .player2{ 
+    /* background-color: rgba(13, 83, 234, 0.3); */
+     height: 100vh; 
+    width: 50vw; 
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-}
+    align-items: center; 
+ } 
 
 .signs{
     display: flex;
@@ -47,13 +50,15 @@ body{
 }
 
 .p1-color{
-    background-color: rgba(255, 78, 2, 0.5);
-    border: solid 6px rgb(255, 90, 5, 1) ;
+    /* background-color: rgba(255, 78, 2, 0.5); */
+    border: solid 6px #343a40;
+    Color: #f8f9fa
 }
 
 .p2-color{
-    background-color: rgba(13, 83, 234, 0.3);
-    border: solid 6px rgba(13, 83, 234, 1);
+    /* background-color: rgba(13, 83, 234, 0.3); */
+    border: solid 6px #343a40;
+    Color: #f8f9fa
 }
 
 #p1-rock, #p2-rock{
@@ -69,6 +74,13 @@ body{
 #p1-scissor, #p2-scissor{
     background-image: url('images/scissor.jpeg');
     background-size: cover;
+}
+
+.circle:hover{
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.2);
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
 }
 
 button:hover{
@@ -116,9 +128,13 @@ button:hover{
 .startBtn{
     padding: 1rem 2rem;
     font-size: 2rem;
-    background-color: #081b31;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    
     color: white;
-    border: solid 2px black ;
+    border: solid 2px rgba(255,255,255,0.2) ;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    color: white;
     border-radius: 10px;
     cursor: pointer;
     position: absolute;
@@ -130,9 +146,11 @@ button:hover{
 .playAgain{
     padding: 1rem 2rem;
     font-size: 2rem;
-    background-color: #081b31;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
     color: white;
-    border: solid 2px black ;
+    border: solid 2px rgba(255,255,255,0.2) ;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
     border-radius: 10px;
     cursor: pointer;
     position: absolute;
