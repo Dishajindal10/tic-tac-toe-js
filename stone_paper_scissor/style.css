@@ -9,7 +9,7 @@ body{
     display: flex;
     background:
         radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%),
-        linear-gradient(90deg, #0f2027 50%, #203a43 50%);
+        linear-gradient(90deg, #d35400 50%, #2980b9 50%);
 }
 
 .p1{
@@ -46,8 +46,10 @@ body{
     width: 120px;
     border-radius: 50%;
     margin: 3vh;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 }
+
 
 .p1-color{
     /* background-color: rgba(255, 78, 2, 0.5); */
@@ -81,6 +83,8 @@ body{
     background-color: rgba(255,255,255,0.2);
     transform: translateY(-10px);
     transition: all 0.3s ease;
+    transform: scale(1.15) rotate(5deg); /* Slight tilt makes it feel playful */
+
 }
 
 button:hover{
@@ -154,8 +158,34 @@ button:hover{
     border-radius: 10px;
     cursor: pointer;
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 50%;
     transform: translateX(-50%);
     display: none;
+}
+
+.score-container{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: #ecf0f1;
+    border: 5px solid #2c3e50;
+    border-bottom: none;
+    backdrop-filter: blur(10px);
+    border-radius: 100px 100px 0 0;
+
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+
+    height: 80px;
+    width: 150px;
+    padding: 0px 35px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
 }
